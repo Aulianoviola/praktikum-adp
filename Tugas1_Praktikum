@@ -1,0 +1,51 @@
+//Kode Program Soal 1
+//Buatlah Program untuk menghitung volume dan luas permukaan dari bola yang jari jarinya diinput dari keyboard.
+Program MenghitungVolumeDanLuasPermukaanBola;
+var
+  r:integer;
+  Volume,Luas_Permukaan:real;
+const 
+  phi=3.14;
+begin
+  WriteLn('Nama  = Aulia Noviola');
+  WriteLn('Nim   = 2310431001');
+  WriteLn('Shift = 4');
+  WriteLn();
+  WriteLn('PROGRAM MENGHITUNG VOLUME DAN LUAS PERMUKAAN BOLA');
+  write('jari-jari = ');
+  readln(r);
+  Volume:=(4/3)*phi*r*r*r;
+  Luas_Permukaan:=4*phi*r*r;
+  WriteLn('Volume Bola         = ',Volume:10:2);
+  WriteLn('Luas Permukaan Bola = ',Luas_Permukaan:10:2);
+end.
+
+//Kode Program Soal 2
+//Buatlah program menghitung rata-rata, ragam, dan simpangan baku menggunakan minimal 5 data(bebas), dan data di input dari keyboard.
+program Menghitung_Rata_Rata_Ragam_dan_Simpangan_Baku;
+var
+  a,b,c,d,e,Rata_rata,Ragam,Simpangan_baku:real;
+begin
+  WriteLn('Nama  = Aulia Noviola');
+  WriteLn('Nim   = 2310431001');
+  WriteLn('Shift = 4');
+  WriteLn();
+  WriteLn('Program Menghitung Rata-Rata, Ragam, dan Simpangan baku');
+  Write('Data 1:');
+  ReadLn(a);
+  Write('Data 2:');
+  ReadLn(b);
+  Write('Data 3:');
+  ReadLn(c);
+  Write('Data 4:');
+  ReadLn(d);
+  Write('Data 5:');
+  ReadLn(e);
+  Rata_rata:=(a+b+c+d+e)/5;
+  Ragam:=1/5*(sqr(a-Rata_rata)+sqr(b-Rata_rata)+sqr(c-Rata_rata)+sqr(d-Rata_rata)+sqr(e-Rata_rata));
+  Simpangan_Baku:=sqrt(Ragam);
+  WriteLn('Rata-rata.     = ',Rata_rata:10:2);
+  WriteLn('Ragam.         = ',Ragam:10:2);
+  WriteLn('Simpangan Baku = ',Simpangan_Baku:10:2);  
+  readln;
+end.
