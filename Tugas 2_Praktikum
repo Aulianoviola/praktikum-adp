@@ -1,0 +1,249 @@
+//Program Pascal
+
+program Tiket_Penerbangan;
+uses crt;
+var
+  nama,jenis_kelamin,maskapai,kota,M:String;
+  umur,tujuan:Integer;
+  harga,jumlah,total:real;
+begin
+clrscr;
+  Writeln('Pembelian Tiket Pesawat');
+  Writeln();
+  Writeln('Lengkapi data diri terlebih dahulu untuk pembelian Tiket');
+  Writeln();
+  Write('Nama           :');
+  ReadLn(nama);
+  Write('Umur           :');
+  ReadLn(umur); 
+  Write('Jenis Kelamin  :');
+  ReadLn(jenis_kelamin);
+clrscr; 
+  WriteLn();
+  WriteLn('Kota Tujuan :');
+  Writeln();
+  WriteLn('1. Jakarta');
+  WriteLn('2. Bali');
+  WriteLn('3. Lombok');
+  Writeln();
+  Write('Pilih Kota Tujuan : ');
+  ReadLn(tujuan);
+  Writeln();
+   
+If Tujuan=1 then
+  Begin
+    Kota:='Jakarta';
+    Writeln     ('Silahkan Pilih Jenis Maskapai');
+    Writeln();
+      Writeln('a. Ekonomi (Rp1.075.000)');
+      Writeln('b. Bisnis (Rp2.000.000)');
+      Writeln('c. First Class (Rp3.500.000)');
+      Writeln();
+      Write('Pilih Jenis Maskapai : '); readln(maskapai);
+      Writeln();
+      Write('Jumlah Tiket : '); readln(jumlah);
+        If maskapai = 'a' then
+          begin
+          Harga := 1075000;
+          M:='Ekonomi';
+          end
+        else If maskapai = 'b' then
+          begin
+          Harga := 2000000;
+          M:='Bisnis';
+          end
+         else If maskapai = 'c' then
+          begin
+          Harga := 3500000;
+          M:='First Class';
+          end
+   end;
+
+If Tujuan=2 then
+  begin
+    Kota:='Bali';
+    Writeln     ('Silahkan Pilih Jenis Maskapai');
+    Writeln();
+      Writeln('a. Ekonomi (Rp1.900.000)');
+      Writeln('b. Bisnis (Rp3.500.000)');
+      Writeln('c. First Class (Rp5.000.000)');
+      Writeln();
+      Write('Pilih Jenis Maskapai : '); readln(maskapai);
+      Writeln();
+      Write('Jumlah Tiket : '); readln(jumlah);
+        If maskapai = 'a' then
+          begin
+          Harga := 1900000;
+          M:='Ekonomi';
+          end
+        else If maskapai = 'b' then
+          begin
+          Harga := 3500000;
+          M:='Bisnis';
+          end
+         else If maskapai = 'c' then
+          begin
+          Harga := 5000000;
+          M:='First Class';
+          end
+   end;
+ 
+If Tujuan=3 then
+  Begin
+    Kota:='Lombok';
+    Writeln     ('Silahkan Pilih Jenis Maskapai');
+    Writeln();
+      Writeln('a. Ekonomi (Rp2.100.000)');
+      Writeln('b. Bisnis (Rp4.000.000)');
+      Writeln('c. First Class (Rp6.500.000)');
+      Writeln();
+      Write('Pilih Jenis Maskapai : '); readln(maskapai);
+      Writeln();
+      Write('Jumlah Tiket : '); readln(jumlah);
+        If maskapai = 'a' then
+          begin
+          Harga := 2100000;
+          M:='Ekonomi';
+          end
+        else If maskapai = 'b' then
+          begin
+          Harga := 4000000;
+          M:='Bisnis';
+          end
+        else If maskapai = 'c' then
+          begin
+          Harga := 6500000;
+          M:='First Class';
+          end
+   end;
+  
+if jumlah<4 then
+  total:=harga*jumlah
+else
+  total:=harga*jumlah*0.75;
+clrscr;
+Writeln('            Bukti Pemesanan          ');
+Writeln();
+Writeln('-------------------------------------');
+Writeln('Nama             :',nama);
+Writeln('Umur             :',umur); 
+Writeln('Jenis Kelamin    :',jenis_kelamin);
+Writeln('-------------------------------------');
+Writeln('Kota Tujuan      :',kota); 
+Writeln('Jenis Maskapai   :',M);
+writeln('Jumlah Tiket     :',jumlah);
+writeln('Total Harga      :',total:10:2);
+Writeln('-------------------------------------');
+Writeln();
+writeln('Terimakasih telah melakukan pemesanan di sini');
+writeln('Semoga Selamat Sampai Tujuan');
+     
+  readln;
+end.
+
+//Program Python
+
+print ('Pembelian Tiket Pesawat')
+print ()
+print ('Lengkapi data diri terlebih dahulu untuk pembelian Tiket')
+print ()
+Nama = str(input('Nama          :'))
+Umur = int(input('Umur          :'))
+JK = str(input('Jenis Kelamin :'))
+
+print ()
+print ('Kota Tujuan :')
+print ()
+print ('1. Jakarta')
+print ('2. Bali')
+print ('3. Lombok')
+print ()
+Tujuan= input('Pilih Kota Tujuan : ')
+
+if Tujuan == '1':
+    Kota = 'Jakarta'
+    print()
+    print('Silahkan Pilih Jenis Maskapai')
+    print()
+    print('a. Ekonomi (Rp1.075.000)')
+    print('b. Bisnis (Rp2.000.000)')
+    print('c. Firts Class (Rp3.500.000)')
+    print()
+    Maskapai = str(input('Pilih Jenis Maskapai : '))
+    print()
+    Tiket = int(input('Jumlah Tiket : '))
+    if Maskapai == 'a':
+        Harga = 1075000
+        M = 'Ekonomi'
+    elif Maskapai == 'b':
+        Harga = 2000000
+        M = 'Bisnis'
+    elif Maskapai == 'c':
+        Harga = 3500000
+        M = 'Firts Class'
+        
+elif Tujuan == '2':
+    Kota = 'Bali'
+    print()
+    print('Silahkan Pilih Jenis Maskapai')
+    print()
+    print('a. Ekonomi (Rp1.900.000)')
+    print('b. Bisnis (Rp3.500.000)')
+    print('c. Firts Class (Rp5.000.000)')
+    print()
+    Maskapai = str(input('Pilih Jenis Maskapai : '))
+    print()
+    Tiket = int(input('Jumlah Tiket : '))
+    if Maskapai == 'a':
+        Harga = 1900000
+        M = 'Ekonomi'
+    elif Maskapai == 'b':
+        Harga = 3500000
+        M = 'Bisnis'
+    elif Maskapai == 'c':
+        Harga = 5000000
+        M= 'Firts Class'
+
+elif Tujuan == '3':
+    Kota = 'Lombok'
+    print()
+    print('Silahkan Pilih Jenis Maskapai')
+    print()
+    print('a. Ekonomi (Rp2.100.000)')
+    print('b. Bisnis (Rp4.000.000)')
+    print('c. First Class (Rp6.500.000)')
+    print()
+    Maskapai = str(input('Pilih Jenis Maskapai : '))
+    print()
+    Tiket = int(input('Jumlah Tiket : '))
+    if Maskapai == 'a':
+        Harga = 2100000
+        M = 'Ekonomi'
+    elif Maskapai == 'b':
+        Harga = 4000000
+        M = 'Bisnis'
+    elif Maskapai == 'c':
+        Harga = 6500000
+        M = 'First Class'
+        
+if Tiket < 4:
+    Total = Harga * Tiket 
+else:
+    Total = Harga * Tiket * (75/100)
+
+print()
+print('       Bukti Pemesanan        ')
+print()
+print('==============================')
+print('Nama           :', Nama)
+print('Umur           :', Umur)
+print('Jenis Kelamin  :', JK)
+print()
+print('==============================')
+print()
+print('Kota Tujuan    :', Kota) 
+print('Jenis Maskapai :',M)
+print('Jumlah Tiket   :', Tiket)
+print(f'Total Harga    : Rp{Total:10.2f}')
+print()
+print('==============================')
