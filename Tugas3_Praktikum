@@ -1,0 +1,30 @@
+#Tugas 3 Praktikum ADP
+
+print("Tugas Program Perulangan")
+print("Nama  : Aulia Noviola")
+print("NIM   : 2310431001")
+print("Shift : 4")
+print()
+
+#Input jumlah huruf pada piramida
+jumlah_huruf = int(input("Masukkan jumlah huruf pada piramida: "))
+
+def print_alphabet_pyramid(num):
+    # Mengonversi nomor ke huruf alfabet
+    def get_alphabet(num):
+        return chr(65 + num - 1)
+
+    # Membuat bagian atas piramida
+    for i in range(1, num + 1):
+        # Spasi sebelum huruf
+        print(" " * (num - i), end="")
+        # Huruf dari A ke huruf terakhir
+        for j in range(1, i + 1):
+            print(get_alphabet(j), end="")
+        # Huruf dari huruf sebelumnya ke A
+        for k in range(i - 1, 0, -1):
+            print(get_alphabet(k), end="")
+        print()
+
+# Memanggil fungsi untuk menampilkan pola piramida
+print_alphabet_pyramid(jumlah_huruf)
