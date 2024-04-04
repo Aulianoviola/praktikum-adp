@@ -1,0 +1,20 @@
+print("PERULANGAN DAN PENGKONDISIAN BERSARANG- Modul 4")
+print("Nama  : Aulia Noviola")
+print("Nim   : 2310431001")
+print("shift : 4")
+print()
+
+total_angka = 100
+panjang_baris = 10
+
+total_dor = 0
+for angka in range(1, total_angka + 1, panjang_baris):
+    for i in range(angka, angka + panjang_baris): 
+        if i % 3 == 0 or i % 5 == 0:
+            print("DOR", end=" ")
+            total_dor += 1
+        else:
+            print(i, end=" ")
+    print()     
+print()
+print("Total DOR yang muncul sebanyak =", total_dor)
