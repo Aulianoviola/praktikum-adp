@@ -1,0 +1,29 @@
+print("Nama  : Aulia Noviola")
+print("NIM   : 2310431001")
+print("Shift : 4")
+print()
+print("=====PROGRAM ARRAY=====")
+
+def input_array(prompt):
+    while True:
+        arr_str = input(prompt)
+        arr = arr_str.split()
+        if all(x.isdigit() and 0 <= int(x) <= 9 for x in arr):
+            return [int(x) for x in arr]
+        else:
+            print("Input tidak valid. Setiap elemen harus bilangan bulat dari 0 sampai 9. Silakan masukkan ulang.")
+
+A = input_array("Masukkan Array A : ")
+B = input_array("Masukkan Array B : ")
+
+set_A = set(A)
+set_B = set(B)
+
+array_hanya_di_A = set_A - set_B
+array_hanya_di_B = set_B - set_A
+array_di_A_dan_B = set_A & set_B
+
+print()
+print("Elemen yang hanya ada di Array A :", array_hanya_di_A)
+print("Elemen yang hanya ada di Array B :", array_hanya_di_B)
+print("Elemen yang ada di Array A dan B :", array_di_A_dan_B)
