@@ -1,0 +1,42 @@
+print("Nama  : Aulia Noviola")
+print("Nim   : 2310431001")
+print("Shift : 4")
+print()
+n = int(input("Masukkan jumlah barang: "))
+barang = []
+for i in range(n):
+    nama_barang = input(f"Nama barang ke-{i+1}: ")
+    harga_barang = float(input(f"Harga barang {nama_barang}: "))
+    stok_barang = int(input(f"Stok barang {nama_barang}: "))
+    barang.append([nama_barang, harga_barang, stok_barang])
+
+print("-"*18,"Toko Kelontong","-"*18)
+print("-"*55)
+print("|{:<20}|{:<20}|{:<10}|".format("Nama Barang", "Harga", "Stok"))
+print("-"*55)
+for item in barang:
+    print(f"|{item[0]:<20}|{item[1]:<20}|{item[2]:<10}|")
+print("-"*55)
+
+keuntungan_terbesar = -1
+keuntungan_terkecil = float('inf')
+nama_barang_terbesar = ""
+nama_barang_terkecil = ""
+total_keuntungan = 0
+
+for item in barang:
+    keuntungan = item[1] * item[2]
+    total_keuntungan += keuntungan
+    
+    if keuntungan > keuntungan_terbesar:
+        keuntungan_terbesar = keuntungan
+        nama_barang_terbesar = item[0]
+    
+    if keuntungan < keuntungan_terkecil:
+        keuntungan_terkecil = keuntungan
+        nama_barang_terkecil = item[0]
+
+print()
+print(f"Nama barang dengan keuntungan terbesar: {nama_barang_terbesar}")
+print(f"Nama barang dengan keuntungan terkecil: {nama_barang_terkecil}")
+print(f"Total keuntungan: {total_keuntungan}")
